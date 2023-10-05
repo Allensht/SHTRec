@@ -54,25 +54,39 @@ body {
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 0 12px rgba(6,1,1,999);
-    display: flex;
     position: absolute;
 }
+.ale {
+    text-align: center;
+}
 .scr {
-    margin: auto;
-    display: flex;
-    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20%;
+    text-align: center;
+}
+.logScr {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
 }
 .stopLog {
     color: #000000;
     font-size: 60px;
-}
-.btn {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.rec {
+.btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.startBtn {
     box-shadow: 0 0 12px rgba(6,1,1,999);
     width: 200px;
     height: 123px;
@@ -81,16 +95,12 @@ body {
     border-radius: 10px;
     font-size: 30px;
 }
-.rec:hover {
+.startBtn:hover {
     color: #ffffff;
     background-color: #000000;
     -webkit-box-shadow: 10px 10px 99px 6px rgb(223, 229, 231);
     -moz-box-shadow: 10px 10px 99px 6px rgb(206, 209, 210);
     box-shadow: 10px 10px 99px 6px rgb(223, 235, 235);
-}
-.alert span {
-    color: #000000;
-    font-size: 20px
 }
 .footer {
     height: 20px;
@@ -105,9 +115,10 @@ body {
     color: #000000;
 }
 .downBtn {
-    position: fixed;
-    top: 70%;
-    left: 24%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
 }
 .download {
     box-shadow: 0 0 12px rgba(6,1,1,999);
@@ -141,22 +152,6 @@ body {
     -moz-box-shadow: 10px 10px 99px 6px rgb(206, 209, 210);
     box-shadow: 10px 10px 99px 6px rgb(223, 235, 235);
 }
-.home {
-    box-shadow: 0 0 12px rgba(6,1,1,999);
-    width: 200px;
-    height: 80px;
-    color: #000000;
-    background: #e6bc9450;
-    border-radius: 10px;
-    font-size: 30px;
-}
-.home:hover {
-    color: #ffffff;
-    background-color: #000000;
-    -webkit-box-shadow: 10px 10px 99px 6px rgb(223, 229, 231);
-    -moz-box-shadow: 10px 10px 99px 6px rgb(206, 209, 210);
-    box-shadow: 10px 10px 99px 6px rgb(223, 235, 235);
-}
 .stop {
     box-shadow: 0 0 12px rgba(6,1,1,999);
     width: 200px;
@@ -174,12 +169,14 @@ body {
     box-shadow: 10px 10px 99px 6px rgb(223, 235, 235);
 }
 :root {
-    --h: 280px;
+    --h: 250px;
   }
   .container {
     display: flex;
-    margin: 0 auto;
-    align-items: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
     height: var(--h);
   }
   .container span {
