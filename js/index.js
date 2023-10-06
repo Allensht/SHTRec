@@ -8,6 +8,7 @@ let videoTracks;
 let video;
 let a;
 let driverObj;
+let state
 let loadPart = `<div class="bg"></div><div class="head"><div class="topBox"><a href="https://github.com/Allensht/SHTRec/" class="github-corner" aria-label="View source on GitHub"><svg width="80"
 height="80" viewBox="0 0 250 250"
 style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;"
@@ -51,7 +52,12 @@ let aPart = `<div class="bg"></div><div class="head"><div class="topBox"><a href
 
 
 function start() {
-    teach()
+    state = localStorage.getItem("state");
+    if (state !== "yes") {
+        teach();
+    }else {
+        yes();
+    }
 }
 
 
@@ -91,6 +97,7 @@ function teach() {
     });
     document.body.innerHTML = aPart;
     driverObj.drive();
+    localStorage.setItem("state", "yes")
 }
 
 
